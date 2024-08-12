@@ -1,3 +1,3 @@
 # Krispcall
 **Cypress installation**
-*npm init -y*
+<br> *npm init -y* </br>
