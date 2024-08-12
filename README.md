@@ -1,2 +1,2 @@
 # Krispcall
-** Cypress installation**
+**Cypress installation**
