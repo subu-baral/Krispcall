@@ -7,5 +7,9 @@ describe('template spec', () => {
     cy.get('#user-name').type("standard_user");
     cy.get('#password').type("secret_sauce");
     cy.get('#login-button').click();
+
+    cy.get(".bm-burger-button").click()
+    cy.contains("About")
+    cy.get(".secret_sauce").click()
   })
 })
