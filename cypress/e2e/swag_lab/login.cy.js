@@ -27,5 +27,6 @@ describe ('Login page', ()=>{
         cy.get('#user-name').type("Tester")
         cy.get('#password').type("secret_sauce")
         cy.get('#login-button').click()
+        cy.get('h3').should('have.text','Epic sadface: Username and password do not match any user in this service')
     })
 })
