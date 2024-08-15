@@ -1,5 +1,5 @@
 describe ('Login page', ()=>{
-    it ('Valid login with standard user', ()=>{
+    it ('login page should be visible', ()=>{
         // visit the swag lab page
         cy.visit('https://www.saucedemo.com/')
         cy.contains('Swag Labs')
@@ -13,5 +13,19 @@ describe ('Login page', ()=>{
         //Cypress.Commands.add('clickPasswordField', (selector) => {
          //   cy.get(selector).should('be.visible').and('have.attr', 'placeholder').click();
        // })
+    })
+    // Valid login with standard user
+    it.skip('Valid login with standard user with valid password',()=>{
+        cy.visit('https://www.saucedemo.com/')
+        cy.get('#user-name').type("standard_user")
+        cy.get('#password').type("secret_sauce")
+        cy.get('#login-button').click()
+    })
+    //invalid login with incorrect username
+    it ('invalid login with incorrect username',()=>{
+        cy.visit('https://www.saucedemo.com/')
+        cy.get('#user-name').type("Tester")
+        cy.get('#password').type("secret_sauce")
+        cy.get('#login-button').click()
     })
 })
