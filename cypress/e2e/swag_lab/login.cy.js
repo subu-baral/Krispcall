@@ -16,7 +16,7 @@ describe ('Login page', ()=>{
     })
     // Valid login with standard user
     it('Valid login with standard user with valid password',()=>{
-        cy.visit('C')
+        cy.visit('https://www.saucedemo.com/')
         cy.get('#user-name').type("standard_user")
         cy.get('#password').type("secret_sauce")
         cy.get('#login-button').click()
